@@ -117,6 +117,9 @@
       <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
       <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
+      <path value="$PROJECT_DIR$/vendor/astrotomic/laravel-translatable" />
+      <path value="$PROJECT_DIR$/vendor/mcamara/laravel-localization" />
+      <path value="$PROJECT_DIR$/vendor/yajra/laravel-datatables-oracle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1lgj0zYbnUxYeczdXTI9J8QycHi" />
@@ -127,9 +130,21 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/en" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ecommercepro\app\Models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ecommercepro\resources\lang\en" />
+      <recent name="C:\wamp64\www\ecommercepro\resources\lang\ar" />
+      <recent name="C:\wamp64\www\ecommercepro\app\Helpers" />
+      <recent name="C:\wamp64\www\ecommercepro\resources\views\dashboard\settings\shippings" />
+      <recent name="C:\wamp64\www\ecommercepro\resources\lang" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -145,11 +160,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608025411130</updated>
-      <workItem from="1608025412628" duration="962000" />
+      <workItem from="1608025412628" duration="99217000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="347" y="59" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608351939242">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="347" y="59" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1608351939242" />
+    <state x="410" y="59" key="FileChooserDialogImpl" timestamp="1608030109329">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="410" y="59" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1608030109329" />
+    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1608046790198">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1608046790198" />
   </component>
 </project>
