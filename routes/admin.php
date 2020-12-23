@@ -29,8 +29,8 @@ Route::group(           //[17]
         Route::get('/', 'DashboardController@index')->name('admin.dashboard');  // [11]
 
         Route::group(['prefix' => 'settings'], function () {      // [16]
-            Route::get('shipping-methods/{type}', 'SettingsController@editShippingMethods')->name('edit.shippings.methods');      // [16]
-            Route::put('shipping-methods/{id}', 'SettingsController@updateShippingMethods')->name('update.shippings.methods');      // [16]
+            Route::get('shipping-methods/{type}', 'SettingsController@editShippingMethods')->name('edit.shippings.methods');      // [16]    view edit[21]
+            Route::put('shipping-methods/{id}', 'SettingsController@updateShippingMethods')->name('update.shippings.methods');      // [16] [21]
         });
 
     });
