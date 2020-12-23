@@ -130,7 +130,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/en" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/en/admin" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -139,11 +139,11 @@
       <recent name="C:\wamp64\www\ecommercepro\app\Models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ecommercepro\resources\lang\en\admin" />
+      <recent name="C:\wamp64\www\ecommercepro\resources\lang\ar\admin" />
       <recent name="C:\wamp64\www\ecommercepro\resources\lang\en" />
       <recent name="C:\wamp64\www\ecommercepro\resources\lang\ar" />
       <recent name="C:\wamp64\www\ecommercepro\app\Helpers" />
-      <recent name="C:\wamp64\www\ecommercepro\resources\views\dashboard\settings\shippings" />
-      <recent name="C:\wamp64\www\ecommercepro\resources\lang" />
     </key>
   </component>
   <component name="RunManager">
@@ -160,7 +160,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608025411130</updated>
-      <workItem from="1608025412628" duration="99217000" />
+      <workItem from="1608025412628" duration="115065000" />
     </task>
     <servers />
   </component>
