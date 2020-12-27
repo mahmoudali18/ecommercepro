@@ -34,6 +34,11 @@ Route::group(           //[17]
             Route::put('shipping-methods/{id}', 'SettingsController@updateShippingMethods')->name('update.shippings.methods');      // [16] [21]
         });
 
+        Route::group(['prefix' => 'profile'], function () {      // [25]
+            Route::get('edit', 'ProfileController@editProfile')->name('edit.profile');      // [25]
+            Route::put('update', 'ProfileController@updateProfile')->name('update.profile');     // [25] [ مش هباصي الid علشان هجيبه من الauth ]
+        });
+
     });
 
 
