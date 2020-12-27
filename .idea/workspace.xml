@@ -130,7 +130,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/en/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/dashboard/profile" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -139,11 +139,11 @@
       <recent name="C:\wamp64\www\ecommercepro\app\Models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ecommercepro\resources\views\dashboard\profile" />
       <recent name="C:\wamp64\www\ecommercepro\resources\lang\en\admin" />
       <recent name="C:\wamp64\www\ecommercepro\resources\lang\ar\admin" />
       <recent name="C:\wamp64\www\ecommercepro\resources\lang\en" />
       <recent name="C:\wamp64\www\ecommercepro\resources\lang\ar" />
-      <recent name="C:\wamp64\www\ecommercepro\app\Helpers" />
     </key>
   </component>
   <component name="RunManager">
@@ -160,7 +160,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608025411130</updated>
-      <workItem from="1608025412628" duration="118933000" />
+      <workItem from="1608025412628" duration="155722000" />
     </task>
     <servers />
   </component>
@@ -168,10 +168,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="347" y="59" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608351939242">
+    <state x="347" y="59" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608998362419">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="347" y="59" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1608351939242" />
+    <state x="347" y="59" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1608998362419" />
     <state x="410" y="59" key="FileChooserDialogImpl" timestamp="1608030109329">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
