@@ -39,6 +39,29 @@ Route::group(           //[17]
             Route::put('update', 'ProfileController@updateProfile')->name('update.profile');     // [25] [ مش هباصي الid علشان هجيبه من الauth ]
         });
 
+        ################################     categories Route     ##################################
+        Route::group(['prefix' => 'main_categories'], function () {      // [27]
+            Route::get('/', 'MainCategoriesController@index')->name('admin.maincategories');                         // [27]
+            Route::get('create', 'MainCategoriesController@create')->name('admin.maincategories.create');            //[28]
+            Route::post('store', 'MainCategoriesController@store')->name('admin.maincategories.store');               //[29]
+            Route::get('edit/{id}', 'MainCategoriesController@edit')->name('admin.maincategories.edit');             //[27]
+            Route::post('update/{id}', 'MainCategoriesController@update')->name('admin.maincategories.update');        //[27]
+            Route::get('delete/{id}', 'MainCategoriesController@destroy')->name('admin.maincategories.delete');        //[28]
+        });
+        ################################  end   categories Route     ################################
+
+        ################################    sub categories Route     ##################################
+        Route::group(['prefix' => 'sub_categories'], function () {      // [30]
+            Route::get('/', 'SubCategoriesController@index')->name('admin.subcategories');                         // []
+            Route::get('create', 'SubCategoriesController@create')->name('admin.subcategories.create');            //[31]
+            Route::post('store', 'SubCategoriesController@store')->name('admin.subcategories.store');               //[31]
+            Route::get('edit/{id}', 'SubCategoriesController@edit')->name('admin.subcategories.edit');             //[31]
+            Route::post('update/{id}', 'SubCategoriesController@update')->name('admin.subcategories.update');        //[31]
+            Route::get('delete/{id}', 'SubCategoriesController@destroy')->name('admin.subcategories.delete');        //[]
+        });
+        ################################  end  sub categories Route     ################################
+
+
     });
 
 
