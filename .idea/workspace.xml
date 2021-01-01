@@ -130,7 +130,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/dashboard/profile" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -139,11 +139,11 @@
       <recent name="C:\wamp64\www\ecommercepro\app\Models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\ecommercepro\resources\views\dashboard\profile" />
-      <recent name="C:\wamp64\www\ecommercepro\resources\lang\en\admin" />
-      <recent name="C:\wamp64\www\ecommercepro\resources\lang\ar\admin" />
-      <recent name="C:\wamp64\www\ecommercepro\resources\lang\en" />
-      <recent name="C:\wamp64\www\ecommercepro\resources\lang\ar" />
+      <recent name="C:\wamp64\www\ecommercepro\app\Http\Requests" />
+      <recent name="C:\wamp64\www\ecommercepro\database\seeds" />
+      <recent name="C:\wamp64\www\ecommercepro\app\Http\Controllers\Dashboard" />
+      <recent name="C:\wamp64\www\ecommercepro\resources\views\dashboard" />
+      <recent name="C:\wamp64\www\ecommercepro\resources\views\dashboard\categories" />
     </key>
   </component>
   <component name="RunManager">
@@ -160,7 +160,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608025411130</updated>
-      <workItem from="1608025412628" duration="155722000" />
+      <workItem from="1608025412628" duration="210157000" />
     </task>
     <servers />
   </component>
