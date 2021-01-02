@@ -61,6 +61,17 @@ Route::group(           //[17]
         });
         ################################  end  sub categories Route     ################################
 
+        ################################    Brands Route     ##################################
+        Route::group(['prefix' => 'brands'], function () {      // [33]
+            Route::get('/', 'BrandsController@index')->name('admin.brands');                         // [33]
+            Route::get('create', 'BrandsController@create')->name('admin.brands.create');            //[33]
+            Route::post('store', 'BrandsController@store')->name('admin.brands.store');               //[33]
+            Route::get('edit/{id}', 'BrandsController@edit')->name('admin.brands.edit');             //[34]
+            Route::post('update/{id}', 'BrandsController@update')->name('admin.brands.update');        //[35]
+            Route::get('delete/{id}', 'BrandsController@destroy')->name('admin.brands.delete');        //[35]
+        });
+        ################################  end  Brands Route     ################################
+
 
     });
 
