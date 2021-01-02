@@ -44,8 +44,8 @@ class SubCategoriesController extends Controller
             $category -> name = $request ->name;
             $category ->save();
 
-            return redirect()->route('admin.subcategories')->with(['success' => 'تم الاضافه بنجاح']);
             DB::commit();
+            return redirect()->route('admin.subcategories')->with(['success' => 'تم الاضافه بنجاح']);
         }catch (\Exception $ex){
             DB::rollBack();
             return redirect()->route('admin.subcategories')->with(['error' => 'حدث خطا ما برجاء المحاوبه لاحقا']);

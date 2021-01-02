@@ -43,8 +43,8 @@ class MainCategoriesController extends Controller
             $category -> name = $request ->name;
             $category ->save();
 
-            return redirect()->route('admin.maincategories')->with(['success' => 'تم الاضافه بنجاح']);
             DB::commit();
+            return redirect()->route('admin.maincategories')->with(['success' => 'تم الاضافه بنجاح']);
         }catch (\Exception $ex){
             DB::rollBack();
             return redirect()->route('admin.maincategories')->with(['error' => 'حدث خطا ما برجاء المحاوبه لاحقا']);
@@ -77,6 +77,7 @@ class MainCategoriesController extends Controller
             if(!$category)
                 return redirect()->route('admin.maincategories')->with(['error' => 'هذا القسم غير موجود']);
 
+            DB::beginTransaction();
             //update DB
             if (!$request->has('is_active'))
                 $request->request->add(['is_active' => 0]);
@@ -90,8 +91,10 @@ class MainCategoriesController extends Controller
             $category -> name = $request ->name;
             $category ->save();
 
+            DB::commit();
             return redirect()->route('admin.maincategories')->with(['success' => 'تم التحديث بنجاح']);
         } catch (\Exception $ex) {
+            DB::rollBack();
             return redirect()->route('admin.maincategories')->with(['error' => 'حدث خطا ما برجاء المحاوبه لاحقا']);
         }
 
@@ -102,7 +105,7 @@ class MainCategoriesController extends Controller
     public function destroy($id)
     {
         try {
-            $category = Category::orderBy('id','DESC')->find($id);
+            $category = Category::find($id);
             if(!$category)
                 return redirect()->route('admin.maincategories')->with(['error' => 'هذا القسم غير موجود']);
 
