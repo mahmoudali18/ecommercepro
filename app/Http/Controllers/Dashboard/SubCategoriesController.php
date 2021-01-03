@@ -105,7 +105,7 @@ class SubCategoriesController extends Controller
     public function destroy($id)
     {
         try {
-            $category = Category::orderBy('id','DESC')->find($id);
+            $category = Category::find($id);
             if(!$category)
                 return redirect()->route('admin.subcategories')->with(['error' => 'هذا القسم غير موجود']);
 

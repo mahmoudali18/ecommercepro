@@ -72,6 +72,17 @@ Route::group(           //[17]
         });
         ################################  end  Brands Route     ################################
 
+        ################################    Tags Route     ##################################
+        Route::group(['prefix' => 'tags'], function () {      // [36]
+            Route::get('/', 'TagsController@index')->name('admin.tags');                         // [37]
+            Route::get('create', 'TagsController@create')->name('admin.tags.create');            //[37]
+            Route::post('store', 'TagsController@store')->name('admin.tags.store');               //[37]
+            Route::get('edit/{id}', 'TagsController@edit')->name('admin.tags.edit');             //[37]
+            Route::post('update/{id}', 'TagsController@update')->name('admin.tags.update');        //[37]
+            Route::get('delete/{id}', 'TagsController@destroy')->name('admin.tags.delete');        //[37]
+        });
+        ################################  end  Tags Route     ################################
+
 
     });
 
