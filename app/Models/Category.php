@@ -47,6 +47,8 @@ class Category extends Model
     }
 
 
+
+    //scope
     public function scopeParent($query){
         return $query->whereNull('parent_id');
     }
@@ -56,8 +58,14 @@ class Category extends Model
     }
 
 
+
+    //relations
     public function _parent(){
         return $this->belongsTo(self::class,'parent_id');
+    }
+
+    public function children() {
+        return $this->hasMany(self::class, 'parent_id');
     }
 
 

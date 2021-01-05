@@ -48,6 +48,7 @@
                                             <thead class="">
                                             <tr>
                                                 <th>الاسم </th>
+                                                <th>القسم الرئيسي </th>
                                                 <th> الاسم بالرابط</th>
                                                 <th>الحالة</th>
                                                 <th>صوره القسم</th>
@@ -60,6 +61,7 @@
                                                 @foreach($categories as $category)
                                                     <tr>
                                                         <td>{{$category -> name}}</td>
+                                                        <td>{{$category -> _parent -> name  ?? '--'}}</td>    <!-- ?? if exist parent appear else appear ' '      //or by optional  -->
                                                         <td>{{$category -> slug}}</td>
                                                         <td>{{$category -> getActive()}}</td>
                                                         <td> <img style="width: 150px; height: 100px;" src=""></td>
