@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use App\Http\Enumerations\CategoryType;
 use Illuminate\Foundation\Http\FormRequest;
 
-class MainCategoryRequest extends FormRequest
+class GeneralProductRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,10 +25,14 @@ class MainCategoryRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' =>'required',
-            //'type' =>'required|in:1,2',
-            'type'  => 'required|in:'. CategoryType::MainCategory . "," . CategoryType::SubCategory,    // by use enum instead of 1 , 2
-            'slug' =>'required|unique:categories,slug,'.$this->id,
+            'name' =>'required|max:100',
+            'slug' =>'required|unique:products,slug,'.$this->id,
+            'description' =>'required|max:1000',
+            'short_description' =>'nullable|max:500',
+            'categories.0' => 'required',
+            'categories.*' =>'numeric|exists:categories,id',
+            'tags'=>'nullable',
+            'brand_id'=>'required|exists:brands,id',
         ];
     }
 }

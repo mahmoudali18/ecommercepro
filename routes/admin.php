@@ -84,6 +84,18 @@ Route::group(           //[17]
         ################################  end  Tags Route     ################################
 
 
+        ################################  start  Product Route     ################################
+        Route::group(['prefix' => 'products'], function () { //[42]
+            Route::get('/', 'ProductsController@index')->name('admin.products');
+            Route::get('general-information', 'ProductsController@create')->name('admin.products.general.create');   //[42]
+            Route::post('store-general-information', 'ProductsController@store')->name('admin.products.general.store');  //[43]
+
+
+
+        });
+        ################################  end  Product Route     ################################
+
+
     });
 
 
