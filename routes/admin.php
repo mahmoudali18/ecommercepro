@@ -88,9 +88,30 @@ Route::group(           //[17]
         Route::group(['prefix' => 'products'], function () { //[42]
             Route::get('/', 'ProductsController@index')->name('admin.products');
             Route::get('general-information', 'ProductsController@create')->name('admin.products.general.create');   //[42]
-            Route::post('store-general-information', 'ProductsController@store')->name('admin.products.general.store');  //[43]
+            Route::post('store-general-information', 'ProductsController@store')->name('admin.products.general.store');  //[43] [44]
 
 
+            Route::get('price/{id}', 'ProductsController@getPrice')->name('admin.products.price');      //[45]
+            Route::post('price', 'ProductsController@saveProductPrice')->name('admin.products.price.store');    //[45]
+
+
+
+        });
+
+        //Edit Products Routes
+        Route::group(['prefix' => 'products'], function () {
+            Route::get('edit-general-information/{id}','ProductsController@edit') -> name('admin.products.general.edit');
+            Route::post('update-general-information/{id}','ProductsController@update') -> name('admin.products.general.update');
+
+           // Route::get('edit-price/{id}','ProductsController@editPrice') -> name('admin.products.price.edit');
+           // Route::post('update-price','ProductsController@updateProductPrice') -> name('products.price.update');
+
+           // Route::get('edit-stock/{id}','ProductsController@editStock') -> name('products.stock.edit');
+           // Route::post('update-stock','ProductsController@updateProductStock') -> name('products.stock.update');
+
+           // Route::get('edit-images/{id}','ProductsController@editImage') -> name('products.images.edit');
+           // Route::post('update-images','ProductsController@saveProductImage') -> name('products.images.update');
+           // Route::post('update-images/database','ProductsController@saveProductImageDb') -> name('products.images.update.db');
 
         });
         ################################  end  Product Route     ################################

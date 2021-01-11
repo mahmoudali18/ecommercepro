@@ -34,9 +34,9 @@ class MainCategoriesController extends Controller
             DB::beginTransaction();
 
             if (!$request->has('is_active'))
-                $request->request->add(['active' => 0]);
+                $request->request->add(['is_active' => 0]);
             else
-                $request->request->add(['active' => 1]);
+                $request->request->add(['is_active' => 1]);
 
 
             //if user choose mainCategory then we must remove parent_id from request
