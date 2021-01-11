@@ -1,18 +1,22 @@
-
 @extends('layouts.admin')
+
+@section('title')
+
+@stop
+
 @section('content')
 
     <div class="app-content content">
         <div class="content-wrapper">
             <div class="content-header row">
                 <div class="content-header-left col-md-6 col-12 mb-2">
-                    <h3 class="content-header-title"> الاقسام الرئيسية </h3>
+                    <h3 class="content-header-title"> المنتجات Products </h3>
                     <div class="row breadcrumbs-top">
                         <div class="breadcrumb-wrapper col-12">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">الرئيسية</a>
                                 </li>
-                                <li class="breadcrumb-item active"> الاقسام الرئيسية
+                                <li class="breadcrumb-item active"> المنتجات Products
                                 </li>
                             </ol>
                         </div>
@@ -26,7 +30,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">جميع الاقسام الرئيسية </h4>
+                                    <h4 class="card-title">المنتجات Products</h4>
                                     <a class="heading-elements-toggle"><i
                                             class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
@@ -47,6 +51,7 @@
                                         <table
                                             class="table display nowrap table-striped table-bordered scroll-horizontal">
                                             <thead class="">
+
                                             <tr>
                                                 <th>الاسم </th>
                                                 <th> الاسم بالرابط </th>
@@ -54,6 +59,8 @@
                                                 <th>السعر</th>
                                                 <th>الإجراءات</th>
                                             </tr>
+
+
                                             </thead>
                                             <tbody>
 
@@ -61,19 +68,20 @@
                                                 @foreach($products as $product)
                                                     <tr>
                                                         <td>{{$product -> name}}</td>
-                                                         <td>{{$product -> slug}}</td>
+                                                        <td>{{$product -> slug}}</td>
                                                         <td>{{$product -> getActive()}}</td>
                                                         <td>{{$product -> price}}</td>
+
                                                         <td>
                                                             <div class="btn-group" role="group"
                                                                  aria-label="Basic example">
-                                                                <a href="{{route('admin.products.price',$product -> id)}}"
-                                                                   class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">السعر</a>
+                                                                <a href="{{route('admin.products.general.edit', $product->id)}}"
+                                                                   class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">edit</a>
 
-                                                                <a href="{{route('admin.products.images',$product -> id)}}"
+                                                                <a href=""
                                                                    class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">الصور</a>
 
-                                                                <a href="{{route('admin.products.stock',$product -> id)}}"
+                                                                <a href=""
                                                                    class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">المستودع</a>
                                                             </div>
                                                         </td>
@@ -85,17 +93,17 @@
                                             </tbody>
                                         </table>
                                         <div class="justify-content-center d-flex">
-
+                                            {!! $products->links() !!}      <!--to show pagination by number-->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    {!! $products -> links() !!}
                 </section>
             </div>
         </div>
     </div>
 
-    @stop
+
+@stop

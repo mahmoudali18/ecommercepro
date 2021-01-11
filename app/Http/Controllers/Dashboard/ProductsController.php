@@ -19,7 +19,8 @@ class ProductsController extends Controller
 
     public function index()
     {
-
+        $products = Product::select('id','slug','price','created_at')->paginate(PAGINATION_COUNT); //name return default by package
+        return view('dashboard.products.general.index',compact('products'));
     }
 
 
@@ -37,28 +38,35 @@ class ProductsController extends Controller
     public function store(GeneralProductRequest $request)
     {
         try {
-           // return $request;
+            //return $request;
 
             DB::beginTransaction();
 
             if (!$request->has('is_active'))
-                $request->request->add(['active' => 0]);
+                $request->request->add(['is_active' => 0]);
             else
-                $request->request->add(['active' => 1]);
+                $request->request->add(['is_active' => 1]);
 
 
-            //if user choose mainCategory then we must remove parent_id from request
-            if($request ->type == CategoryType::MainCategory){  //use enum
-                $request->request->add(['parent_id' => null]);
-            }
-
-            $category = Category::create($request ->except('_token'));
+            $product = Category::create([
+                'slug' =>$request->slug,
+                'brand_id' =>$request->brand_id,
+                'is_active' =>$request->is_active,
+            ]);
 
             //save translations
-            $category -> name = $request ->name;
-            $category ->save();
+            $product -> name = $request ->name;
+            $product -> description = $request ->description;
+            $product -> short_description = $request ->short_description;
+            $product ->save();
 
-            DB::commit();
+            //save product categories
+            $product ->categories()->attach($request->categories); //attach use to save array
+
+            //save product tags
+            $product->tags()->attach($request->tags);
+
+            DB::commit();                       //admin.products.price
             return redirect()->route('admin.maincategories')->with(['success' => 'تم الاضافه بنجاح']);
         }catch (\Exception $ex){
             DB::rollBack();
@@ -70,50 +78,64 @@ class ProductsController extends Controller
 
 
 
-    public function edit($id)
+    /////////////////////////////////////edit products //////////////////////////////
+
+    public function edit($product_id)
     {
-        $category = Category::orderBy('id','DESC')->find($id);
-        if (!$category)
-            return redirect()->route('admin.maincategories')->with(['error' => 'هذا القسم غير موجود']);
 
-        return view('dashboard.categories.edit', compact('category'));
-    }
+        $tags = Tag::select('id')->orderBy('id', 'DESC')->get();
+
+        $brands = Brand::active()->select('id')->orderBy('id', 'DESC')->get();
+
+        $categories = Category::active()->select('id')->orderBy('id', 'DESC')->get();
+
+         $product = Product::find($product_id);
+
+        return view('dashboard.products.general.edit', compact(['tags', 'brands', 'categories', 'product']));
+
+    }//end of edit
 
 
 
 
-    public function update($id, MainCategoryRequest $request)
+    public function update(GeneralProductRequest $request, $product_id)
     {
+
         try {
 
-           // return $request;
-
-            $category = Category::find($id);
-            if(!$category)
-                return redirect()->route('admin.maincategories')->with(['error' => 'هذا القسم غير موجود']);
-
             DB::beginTransaction();
-            //update DB
+
             if (!$request->has('is_active'))
                 $request->request->add(['is_active' => 0]);
             else
                 $request->request->add(['is_active' => 1]);
 
 
-            $category ->update($request ->all());
 
-            //save translations
-            $category -> name = $request ->name;
-            $category ->save();
+            $product = Product::find($product_id);
+
+            $product->update($request->except('categories', 'tags'));  //save in products table
+
+            //save many-to-many with categories and tags tables
+            $product->categories()->sync($request->categories);
+
+            $product->tags()->sync($request->tags);
 
             DB::commit();
-            return redirect()->route('admin.maincategories')->with(['success' => 'تم التحديث بنجاح']);
+
+            return redirect()->route('admin.products.price.edit', $product_id);
+
         } catch (\Exception $ex) {
-            DB::rollBack();
-            return redirect()->route('admin.maincategories')->with(['error' => 'حدث خطا ما برجاء المحاوبه لاحقا']);
+
+            DB::rollback();
+
+            return redirect()->route('admin.products')->with(['error' => 'حدث خطا ما برجاء المحاوبه لاحقا']);
         }
 
-    }
+    }//end of update
+
+
+    ///////////////////////////////////// end edit products //////////////////////////////
 
 
 
