@@ -78,6 +78,9 @@
                                                                 <a href="{{route('admin.products.general.edit', $product->id)}}"
                                                                    class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">edit</a>
 
+                                                                <a href="{{route('admin.products.price', $product->id)}}"
+                                                                   class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">السعر</a>
+
                                                                 <a href=""
                                                                    class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">الصور</a>
 
