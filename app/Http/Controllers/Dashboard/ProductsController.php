@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Enumerations\CategoryType;
 use App\Http\Requests\GeneralProductRequest;
 use App\Http\Requests\MainCategoryRequest;
+use App\Http\Requests\ProductPriceRequest;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
@@ -77,8 +78,32 @@ class ProductsController extends Controller
 
 
 
+    public function getPrice($product_id)
+    {
+        return view('dashboard.products.prices.create')->with('id', $product_id);
 
-    /////////////////////////////////////edit products //////////////////////////////
+    }
+
+
+
+    public function saveProductPrice(ProductPriceRequest $request){
+
+        try {
+
+            Product::whereId($request->product_id)->update($request->except(['_token','product_id']));
+
+            return redirect()->route('admin.products')->with(['success' => 'تم الاضافه بنجاح']);
+
+        }catch (\Exception $ex){
+            return redirect()->route('admin.products')->with(['error' => 'حدث خطا ما برجاء المحاوبه لاحقا']);
+        }
+
+    }
+
+
+
+
+    /////////////////////////////////////start edit products //////////////////////////////
 
     public function edit($product_id)
     {
@@ -136,6 +161,13 @@ class ProductsController extends Controller
 
 
     ///////////////////////////////////// end edit products //////////////////////////////
+
+
+
+
+
+
+
 
 
 
