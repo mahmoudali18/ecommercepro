@@ -94,6 +94,12 @@ Route::group(           //[17]
             Route::get('price/{id}', 'ProductsController@getPrice')->name('admin.products.price');      //[45]
             Route::post('price', 'ProductsController@saveProductPrice')->name('admin.products.price.store');    //[45]
 
+            Route::get('stock/{id}', 'ProductsController@getStock')->name('admin.products.stock'); //[46]
+            Route::post('stock', 'ProductsController@saveProductStock')->name('admin.products.stock.store');  //[46] [47]
+
+            Route::get('images/{id}', 'ProductsController@addImages')->name('admin.products.images');   //[48]
+            Route::post('images', 'ProductsController@saveProductImages')->name('admin.products.images.store'); //[48]
+         //   Route::post('images/db', 'ProductsController@saveProductImagesDB')->name('admin.products.images.store.db');
 
 
 

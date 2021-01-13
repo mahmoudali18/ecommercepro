@@ -134,7 +134,7 @@
                                                                 <optgroup label="من فضلك أختر القسم ">
                                                                     @if($categories && $categories -> count() > 0)
                                                                         @foreach($categories as $category)
-                                                                            <option {{(in_array($category->id, $product->categories()->pluck('category_id')->toArray())) ? 'selected' : ''}}  <!---select many categories-->
+                                                                            <option {{(in_array($category->id, $product->categories()->pluck('category_id')->toArray())) ? 'selected' : ''}}
                                                                                     value="{{$category -> id }}">{{$category -> name}}</option>
                                                                         @endforeach
                                                                     @endif
@@ -156,7 +156,7 @@
                                                                 <optgroup label=" اختر ألعلامات الدلالية ">
                                                                     @if($tags && $tags -> count() > 0)
                                                                         @foreach($tags as $tag)
-                                                                            <option {{in_array($tag->id, $product->tags()->pluck('tag_id')->toArray())}}    <!---select many tags-->
+                                                                            <option {{in_array($tag->id, $product->tags()->pluck('tag_id')->toArray())}}
                                                                                     value="{{$tag -> id }}">{{$tag -> name}}</option>
                                                                         @endforeach
                                                                     @endif
@@ -170,7 +170,7 @@
                                                 </div>
 
                                                 <div class="row" >
-                                                <div class="col-md-4">
+                                                    <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label
                                                                 for="projectinput1">  اختر الماركه
@@ -179,7 +179,7 @@
                                                                 <optgroup label="من فضلك أختر الماركة ">
                                                                     @if($brands && $brands -> count() > 0)
                                                                         @foreach($brands as $brand)
-                                                                            <option {{($brand->id == $product->brand->id) ? 'selected' : ''}}   <!---select one brand-->
+                                                                            <option {{($brand->id == $product->brand->id) ? 'selected' : ''}}
                                                                                     value="{{$brand -> id }}">{{$brand -> name}}</option>
                                                                         @endforeach
                                                                     @endif
