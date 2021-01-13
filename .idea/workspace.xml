@@ -4,6 +4,7 @@
     <list default="true" id="8630bc38-b326-4533-a38e-0f55bfd449ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/products/general/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/products/general/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/products/general/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/products/general/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
@@ -148,16 +149,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\ecommercepro\app\Http\Controllers\Dashboard" />
-      <recent name="C:\wamp64\www\ecommercepro\app\Models" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\ecommercepro\app\Http\Requests" />
+      <recent name="C:\wamp64\www\ecommercepro\resources\views\dashboard\products" />
       <recent name="C:\wamp64\www\ecommercepro\resources\views\dashboard\products\prices" />
       <recent name="C:\wamp64\www\ecommercepro\resources\views\dashboard\products\general" />
       <recent name="C:\wamp64\www\ecommercepro\resources\views\dashboard" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\ecommercepro\app\Http\Controllers\Dashboard" />
+      <recent name="C:\wamp64\www\ecommercepro\app\Models" />
     </key>
   </component>
   <component name="RunManager">
@@ -177,7 +178,8 @@
       <workItem from="1608025412628" duration="233504000" />
       <workItem from="1609591617362" duration="71371000" />
       <workItem from="1610171631022" duration="20397000" />
-      <workItem from="1610344558553" duration="20795000" />
+      <workItem from="1610344558553" duration="23931000" />
+      <workItem from="1610445572450" duration="20571000" />
     </task>
     <servers />
   </component>

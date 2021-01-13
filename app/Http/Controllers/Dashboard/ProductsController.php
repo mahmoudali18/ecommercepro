@@ -7,6 +7,7 @@ use App\Http\Enumerations\CategoryType;
 use App\Http\Requests\GeneralProductRequest;
 use App\Http\Requests\MainCategoryRequest;
 use App\Http\Requests\ProductPriceRequest;
+use App\Http\Requests\ProductStockRequest;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
@@ -86,7 +87,8 @@ class ProductsController extends Controller
 
 
 
-    public function saveProductPrice(ProductPriceRequest $request){
+    public function saveProductPrice(ProductPriceRequest $request)
+    {
 
         try {
 
@@ -99,6 +101,44 @@ class ProductsController extends Controller
         }
 
     }
+
+
+
+    public function getStock($product_id){
+        $product = Product::find($product_id);
+        return view('dashboard.products.stock.create',compact('product'))->with('id',$product_id);
+    }
+
+
+    public function saveProductStock(ProductStockRequest $request)
+    {
+
+        try {
+
+            //other method instead of use validation to handle  'qty' =>'required_if:manage_stock,==,1',    or use custom rule
+            /*
+            if ($request->manage_stock == 1 && $request->qty == null){
+
+                   return redirect()->route('admin.products.stock', $request->product_id)->with(['error' => 'qty is required with management stock']);
+            }
+            */
+
+            Product::whereId($request->product_id)->update($request->except(['_token','product_id']));
+
+            return redirect()->route('admin.products')->with(['success' => 'تم الاضافه بنجاح']);
+
+        }catch (\Exception $ex){
+            return redirect()->route('admin.products')->with(['error' => 'حدث خطا ما برجاء المحاوبه لاحقا']);
+        }
+
+    }
+
+
+
+    public function addImages($product_id){
+        return view('dashboard.products.images.create')->withId($product_id);
+    }
+
 
 
 
