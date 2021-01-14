@@ -6,14 +6,17 @@ use App\Http\Controllers\Controller;
 use App\Http\Enumerations\CategoryType;
 use App\Http\Requests\GeneralProductRequest;
 use App\Http\Requests\MainCategoryRequest;
+use App\Http\Requests\ProductImagesRequest;
 use App\Http\Requests\ProductPriceRequest;
 use App\Http\Requests\ProductStockRequest;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\ProductImage;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 
 class ProductsController extends Controller
@@ -134,13 +137,67 @@ class ProductsController extends Controller
     }
 
 
+    public function addImage($product_id)
+    {
 
-    public function addImages($product_id){
         return view('dashboard.products.images.create')->withId($product_id);
+
+    }// end of add Image
+
+
+    //save images in folder only
+    public function saveProductImage(Request $request)
+    {
+
+        $file = $request->file('dzfile');
+
+        $fileName = uploadImage('products', $file);
+
+        return response()->json([
+
+            'name' => $fileName,
+            'original_name' => $file->getClientOriginalName()
+
+        ]);
+
+    }//end of save product image
+
+
+
+    public function saveProductImagesDB(ProductImagesRequest $request)
+    {
+
+        try {
+           // return $request;
+
+            // save dropzone images
+            if ($request->has('document') && count($request->document) > 0) {
+                foreach ($request->document as $image) {
+                    ProductImage::create([
+                        'product_id' => $request->product_id,
+                        'photo' => $image,
+                    ]);
+                }
+            }
+
+            return redirect()->route('admin.products')->with(['success' => 'تم التحديث بنجاح']);
+
+        }catch(\Exception $ex){
+
+        }
     }
 
 
 
+    public function delete_image(){
+        if(request()->has('id')){
+            $product=ProductImage::findOrfail(request('id'));
+            if(File::exists($product->photo)) {
+                File::delete($product->photo);
+            }
+            $product->delete();
+        }
+    }
 
 
     /////////////////////////////////////start edit products //////////////////////////////

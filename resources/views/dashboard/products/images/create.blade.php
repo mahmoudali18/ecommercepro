@@ -44,88 +44,23 @@
                                 <div class="card-content collapse show">
                                     <div class="card-body">
                                         <form class="form"
-                                              action="{{route('admin.products.stock.store')}}"
+                                              action="{{route('admin.products.images.store.db')}}"
                                               method="POST"
                                               enctype="multipart/form-data">
                                             @csrf
-                                     {{-- or   <input type="hidden" name="product_id" value="{{$product->id}}"> --}}
+
                                             <input type="hidden" name="product_id" value="{{$id}}">
+
                                             <div class="form-body">
 
-                                                <h4 class="form-section"><i class="ft-home"></i> اداره المستودع   </h4>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="projectinput1"> كود  المنتج
-                                                            </label>
-                                                            <input type="text" id="sku"
-                                                                   class="form-control"
-                                                                   placeholder="  "
-                                                                   value="{{$product->sku}}"
-                                                                   name="sku">
-                                                            @error("sku")
-                                                            <span class="text-danger">{{$message}}</span>
-                                                            @enderror
-                                                        </div>
-                                                    </div>
+                                                <h4 class="form-section"><i class="ft-home"></i> صور المنتج </h4>
 
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="projectinput1"> تتبع المستودع "المخزن"
-                                                            </label>
-                                                            <select name="manage_stock" class="select2 form-control" id="manageStock">
-                                                                <optgroup label="من فضلك أختر النوع ">
-                                                                    <option value="1">اتاحة التتبع</option>
-                                                                    <option value="0" selected>عدم اتاحه التتبع</option>
-                                                                </optgroup>
-                                                            </select>
-                                                            @error('manage_stock')
-                                                            <span class="text-danger"> {{$message}}</span>
-                                                            @enderror
-                                                        </div>
+                                                <div class="form-group">
+                                                    <div id="dpz-multiple-files" class="dropzone dropzone-area">
+                                                        <div class="dz-message">يمكنك رفع اكثر من صوره هنا</div>
                                                     </div>
+                                                    <br><br>
                                                 </div>
-
-                                                <div class="row">
-                                                    <!-- QTY  -->
-
-
-
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="projectinput1">حالة المنتج
-                                                            </label>
-                                                            <select name="in_stock" class="select2 form-control" >
-                                                                <optgroup label="من فضلك أختر  ">
-                                                                    <option value="1">متاح</option>
-                                                                    <option value="0">غير متاح </option>
-                                                                </optgroup>
-                                                            </select>
-                                                            @error('in_stock')
-                                                            <span class="text-danger"> {{$message}}</span>
-                                                            @enderror
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div class="col-md-6" style="display:none"  id="qtyDiv">
-                                                        <div class="form-group">
-                                                            <label for="projectinput1">الكمية
-                                                            </label>
-                                                            <input type="text" id="qty"
-                                                                   class="form-control"
-                                                                   placeholder="  "
-                                                                   value="{{old('qty')}}"
-                                                                   name="qty">
-                                                            @error("qty")
-                                                            <span class="text-danger">{{$message}}</span>
-                                                            @enderror
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-
 
                                             </div>
 
@@ -136,7 +71,7 @@
                                                     <i class="ft-x"></i> تراجع
                                                 </button>
                                                 <button type="submit" class="btn btn-primary">
-                                                    <i class="la la-check-square-o"></i> اضافه
+                                                    <i class="la la-check-square-o"></i> تحديث
                                                 </button>
                                             </div>
                                         </form>
@@ -149,20 +84,65 @@
                 </section>
                 <!-- // Basic form layout section end -->
             </div>
-        </div>
-    </div>
 
-@stop
 
-@section('script')
 
-    <script>
-        $(document).on('change','#manageStock',function(){
-            if($(this).val() == 1 ){
-                $('#qtyDiv').show();
-            }else{
-                $('#qtyDiv').hide();
-            }
-        });
-    </script>
+            @stop
+
+            @section('script')
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/dropzone.js"></script>
+
+                <script>
+                    var uploadedDocumentMap = {}
+                    Dropzone.options.dpzMultipleFiles = {
+                        paramName: "dzfile", // The name that will be used to transfer the file
+                        //autoProcessQueue: false,
+                        maxFilesize: 5, // MB
+                        clickable: true,
+                        addRemoveLinks: true,
+                        acceptedFiles: 'image/*',
+                        dictFallbackMessage: " المتصفح الخاص بكم لا يدعم خاصيه تعدد الصوره والسحب والافلات ",
+                        dictInvalidFileType: "لايمكنك رفع هذا النوع من الملفات ",
+                        dictCancelUpload: "الغاء الرفع ",
+                        dictCancelUploadConfirmation: " هل انت متاكد من الغاء رفع الملفات ؟ ",
+                        dictRemoveFile: "حذف الصوره",
+                        dictMaxFilesExceeded: "لايمكنك رفع عدد اكثر من هضا ",
+                        headers: {
+                            'X-CSRF-TOKEN':
+                                "{{ csrf_token() }}"
+                        }
+                        ,
+                        url: "{{ route('admin.products.images.store') }}", // Set the url
+                        success:
+                            function (file, response) {
+                                $('form').append('<input type="hidden" name="document[]" value="' + response.name + '">')
+                                uploadedDocumentMap[file.name] = response.name
+                            }
+                        ,
+                        removedfile: function (file) {
+                            file.previewElement.remove()
+                            var name = ''
+                            if (typeof file.file_name !== 'undefined') {
+                                name = file.file_name
+                            } else {
+                                name = uploadedDocumentMap[file.name]
+                            }
+                            $('form').find('input[name="document[]"][value="' + name + '"]').remove()
+                        }
+                        ,
+                        // previewsContainer: "#dpz-btn-select-files", // Define the container to display the previews
+                        init: function () {
+                            @if(isset($event) && $event->document)
+                            var files =
+                            {!! json_encode($event->document) !!}
+                                for (var i in files) {
+                                var file = files[i]
+                                this.options.addedfile.call(this, file)
+                                file.previewElement.classList.add('dz-complete')
+                                $('form').append('<input type="hidden" name="document[]" value="' + file.file_name + '">')
+                            }
+                            @endif
+                        }
+                    }
+                </script>
 @stop

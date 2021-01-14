@@ -97,9 +97,10 @@ Route::group(           //[17]
             Route::get('stock/{id}', 'ProductsController@getStock')->name('admin.products.stock'); //[46]
             Route::post('stock', 'ProductsController@saveProductStock')->name('admin.products.stock.store');  //[46] [47]
 
-            Route::get('images/{id}', 'ProductsController@addImages')->name('admin.products.images');   //[48]
-            Route::post('images', 'ProductsController@saveProductImages')->name('admin.products.images.store'); //[48]
-         //   Route::post('images/db', 'ProductsController@saveProductImagesDB')->name('admin.products.images.store.db');
+            Route::get('images/{id}', 'ProductsController@addImage')->name('admin.products.images');
+            Route::post('images', 'ProductsController@saveProductImage')->name('admin.products.images.store');
+            Route::post('images/database', 'ProductsController@saveProductImagesDB')->name('admin.products.images.store.db');
+            Route::post('delete/image','ProductController@delete_image')->name('admin.delete.image');
 
 
 
