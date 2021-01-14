@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8630bc38-b326-4533-a38e-0f55bfd449ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/general.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/products/general/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/products/general/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/products/general/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/products/general/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/products/images/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/products/images/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,7 +143,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Models" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -150,11 +151,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\ecommercepro\app\Http\Requests" />
+      <recent name="C:\wamp64\www\ecommercepro\app\Models" />
+      <recent name="C:\wamp64\www\ecommercepro\public\assets\images" />
       <recent name="C:\wamp64\www\ecommercepro\resources\views\dashboard\products" />
+      <recent name="C:\wamp64\www\ecommercepro\app\Http\Requests" />
       <recent name="C:\wamp64\www\ecommercepro\resources\views\dashboard\products\prices" />
-      <recent name="C:\wamp64\www\ecommercepro\resources\views\dashboard\products\general" />
-      <recent name="C:\wamp64\www\ecommercepro\resources\views\dashboard" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\ecommercepro\app\Http\Controllers\Dashboard" />
@@ -179,7 +180,7 @@
       <workItem from="1609591617362" duration="71371000" />
       <workItem from="1610171631022" duration="20397000" />
       <workItem from="1610344558553" duration="23931000" />
-      <workItem from="1610445572450" duration="20571000" />
+      <workItem from="1610445572450" duration="47952000" />
     </task>
     <servers />
   </component>
@@ -211,9 +212,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="109" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1609592044005" />
-    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1608046790198">
+    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1610548724377">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1608046790198" />
+    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1610548724377" />
   </component>
 </project>

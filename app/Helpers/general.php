@@ -10,8 +10,11 @@ function getFolder(){
 
 
 //to save image
-function uploadImage($folder,$image){
-    $image->store('/',$folder);
-    $filename = $image->hashName();
-    return $filename;
+function uploadImage($folder, $image)
+{
+    $image->store('/', $folder);
+    $fileName = $image->hashName();
+    return $fileName;
 }
+
+
