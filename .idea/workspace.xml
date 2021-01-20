@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8630bc38-b326-4533-a38e-0f55bfd449ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helpers/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/general.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/products/images/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/products/images/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ProductStockRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ProductStockRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,7 +141,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -151,11 +149,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\ecommercepro\app\Models" />
-      <recent name="C:\wamp64\www\ecommercepro\public\assets\images" />
-      <recent name="C:\wamp64\www\ecommercepro\resources\views\dashboard\products" />
       <recent name="C:\wamp64\www\ecommercepro\app\Http\Requests" />
-      <recent name="C:\wamp64\www\ecommercepro\resources\views\dashboard\products\prices" />
+      <recent name="C:\wamp64\www\ecommercepro\resources\views\dashboard" />
+      <recent name="C:\wamp64\www\ecommercepro\app\Http\Controllers\Dashboard" />
+      <recent name="C:\wamp64\www\ecommercepro\app\Models" />
+      <recent name="C:\wamp64\www\ecommercepro\app\Rules" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\ecommercepro\app\Http\Controllers\Dashboard" />
@@ -180,7 +178,7 @@
       <workItem from="1609591617362" duration="71371000" />
       <workItem from="1610171631022" duration="20397000" />
       <workItem from="1610344558553" duration="23931000" />
-      <workItem from="1610445572450" duration="47952000" />
+      <workItem from="1610445572450" duration="108898000" />
     </task>
     <servers />
   </component>
@@ -192,22 +190,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1609910662644" />
-    <state x="382" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1609656914352">
+    <state x="382" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1610691813275">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="382" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1609656914352" />
-    <state x="347" y="59" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609999277533">
+    <state x="382" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1610691813275" />
+    <state x="347" y="59" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610690934270">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="347" y="59" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1609999277533" />
-    <state x="410" y="59" key="FileChooserDialogImpl" timestamp="1610288665128">
+    <state x="347" y="59" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1610690934270" />
+    <state x="410" y="59" key="FileChooserDialogImpl" timestamp="1610781698127">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="410" y="59" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610288665128" />
-    <state x="412" y="32" key="NewPhpClassDialog" timestamp="1609910608566">
+    <state x="410" y="59" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610781698127" />
+    <state x="412" y="32" key="NewPhpClassDialog" timestamp="1610641169584">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="412" y="32" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1609910608566" />
+    <state x="412" y="32" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1610641169584" />
     <state x="109" y="0" key="SettingsEditor" timestamp="1609592044005">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

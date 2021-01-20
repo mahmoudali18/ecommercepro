@@ -107,6 +107,10 @@ class Product extends Model
         return $this->belongsToMany(Tag::class, 'product_tags');
     }
 
+    public function options(){
+       return $this->hasMany(Option::class,'product_id');
+    }
+
 
     // Scope
     public function scopeActive($query)
