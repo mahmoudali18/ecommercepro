@@ -75,6 +75,10 @@ class OptionsController extends Controller
     {
         $data = [];
         $data['option'] = Option::find($option_id);
+
+        if(!$data['option'])
+            return redirect()->route('admin.options')->with(['error' => 'this option doesn\'t exists']);
+
         $data['products'] = Product::active()->select('id')->orderBy('id', 'DESC')->get();
         $data['attributes'] = Attribute::select('id')->orderBy('id', 'DESC')->get();
        // return $data;

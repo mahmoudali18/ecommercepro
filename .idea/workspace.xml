@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8630bc38-b326-4533-a38e-0f55bfd449ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ProductStockRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ProductStockRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/OptionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/OptionsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/site.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,23 +140,23 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/front" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\ecommercepro\app\Http\Requests" />
-      <recent name="C:\wamp64\www\ecommercepro\resources\views\dashboard" />
-      <recent name="C:\wamp64\www\ecommercepro\app\Http\Controllers\Dashboard" />
-      <recent name="C:\wamp64\www\ecommercepro\app\Models" />
-      <recent name="C:\wamp64\www\ecommercepro\app\Rules" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\ecommercepro\app\Http\Controllers\Dashboard" />
       <recent name="C:\wamp64\www\ecommercepro\app\Models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ecommercepro\resources\views\front" />
+      <recent name="C:\wamp64\www\ecommercepro\resources\views\layouts" />
+      <recent name="C:\wamp64\www\ecommercepro\resources\views\front\includes" />
+      <recent name="C:\wamp64\www\ecommercepro\app\Http\Requests" />
+      <recent name="C:\wamp64\www\ecommercepro\resources\views\dashboard" />
     </key>
   </component>
   <component name="RunManager">
@@ -178,7 +177,8 @@
       <workItem from="1609591617362" duration="71371000" />
       <workItem from="1610171631022" duration="20397000" />
       <workItem from="1610344558553" duration="23931000" />
-      <workItem from="1610445572450" duration="108898000" />
+      <workItem from="1610445572450" duration="112418000" />
+      <workItem from="1611167108785" duration="7481000" />
     </task>
     <servers />
   </component>
