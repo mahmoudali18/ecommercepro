@@ -25,13 +25,15 @@ Route::group([
     'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
 ], function () {
 
+    // must be authenticated user
     Route::group(['namespace' => 'Site', 'middleware' => 'auth'], function () {
-        // must be authenticated user
+
     });
 
+    //guest  user
     Route::group(['namespace' => 'Site', 'middleware' => 'guest'], function () {
 
-        //guest  user
+
 
 
 

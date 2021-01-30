@@ -44,13 +44,13 @@
 
                                     <div class="form-group row no-gutters">
                                         <label class="col-md-2 form-control-label mb-xs-5 required">
-                                            Email :
+                                            Mobile :
                                         </label>
                                         <div class="col-md-6">
 
-                                            <input class="form-control" name="email" value="{{ old('email') }}"
-                                                   type="email" required="">
-                                            @error('email')
+                                            <input class="form-control" name="mobile" value="{{ old('mobile') }}"
+                                                   type="text" required="">
+                                            @error('mobile')
                                             <span class="invalid-feedback text-danger" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
