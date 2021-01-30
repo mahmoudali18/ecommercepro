@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8630bc38-b326-4533-a38e-0f55bfd449ee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/ecommercepro.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ecommercepro.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/site.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +138,7 @@
       <path value="$PROJECT_DIR$/vendor/yajra/laravel-datatables-oracle" />
       <path value="$PROJECT_DIR$/vendor/spatie/enum" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-enum" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="ProjectId" id="1lgj0zYbnUxYeczdXTI9J8QycHi" />
@@ -137,7 +149,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/front" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -175,7 +187,10 @@
       <workItem from="1610171631022" duration="20397000" />
       <workItem from="1610344558553" duration="23931000" />
       <workItem from="1610445572450" duration="112418000" />
-      <workItem from="1611167108785" duration="11043000" />
+      <workItem from="1611167108785" duration="11516000" />
+      <workItem from="1611229431782" duration="8823000" />
+      <workItem from="1611923258590" duration="36000" />
+      <workItem from="1611924701839" duration="4794000" />
     </task>
     <servers />
   </component>
@@ -203,10 +218,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="412" y="32" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1610641169584" />
-    <state x="109" y="0" key="SettingsEditor" timestamp="1609592044005">
+    <state x="109" y="0" key="SettingsEditor" timestamp="1611925028701">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="109" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1609592044005" />
+    <state x="109" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1611925028701" />
     <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1610548724377">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
