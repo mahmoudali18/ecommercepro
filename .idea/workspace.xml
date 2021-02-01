@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8630bc38-b326-4533-a38e-0f55bfd449ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/site.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,23 +141,23 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Services/SMSGateways" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ecommercepro\app\Http\Services\SMSGateways" />
+      <recent name="C:\wamp64\www\ecommercepro\app\Http\Services" />
+      <recent name="C:\wamp64\www\ecommercepro\app\Models" />
+      <recent name="C:\wamp64\www\ecommercepro\resources\views\front" />
+      <recent name="C:\wamp64\www\ecommercepro\resources\views\layouts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\ecommercepro\app\Http\Controllers\Dashboard" />
       <recent name="C:\wamp64\www\ecommercepro\app\Models" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\ecommercepro\resources\views\front" />
-      <recent name="C:\wamp64\www\ecommercepro\resources\views\layouts" />
-      <recent name="C:\wamp64\www\ecommercepro\resources\views\front\includes" />
-      <recent name="C:\wamp64\www\ecommercepro\app\Http\Requests" />
-      <recent name="C:\wamp64\www\ecommercepro\resources\views\dashboard" />
     </key>
   </component>
   <component name="RunManager">
@@ -184,7 +182,8 @@
       <workItem from="1611167108785" duration="11516000" />
       <workItem from="1611229431782" duration="8823000" />
       <workItem from="1611923258590" duration="36000" />
-      <workItem from="1611924701839" duration="9791000" />
+      <workItem from="1611924701839" duration="13059000" />
+      <workItem from="1612086669451" duration="15067000" />
     </task>
     <servers />
   </component>
@@ -196,10 +195,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1609910662644" />
-    <state x="382" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1610691813275">
+    <state x="382" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612104236698">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="382" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1610691813275" />
+    <state x="382" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1612104236698" />
     <state x="347" y="59" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610690934270">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
