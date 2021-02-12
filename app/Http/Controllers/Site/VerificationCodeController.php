@@ -23,11 +23,20 @@ class VerificationCodeController extends Controller
 
         if(!$check){  // code not correct
 
-            return 'you enter wrong code ';
+          //  return 'you enter wrong code ';
+            return redirect()->route('get.verification.form')->withErrors(['code' => 'الكود الذي ادخلته غير صحيح']);
 
         }else {  // verifiction code correct
-
+            $this->verificationService->removeOTPCode($request -> code);  //if verification code is correct remove it from database i don't need it
             return redirect()->route('home');
         }
     }
+
+
+
+
+    public function getVerifyPage(){
+        return view('auth.verification');
+    }
+
 }
