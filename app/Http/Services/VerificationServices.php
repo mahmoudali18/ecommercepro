@@ -51,4 +51,9 @@ class VerificationServices
         return false ;
     }
 
+
+    public  function removeOTPCode($code){
+        User_verfication::where('code',$code)->delete();
+    }
+
 }
