@@ -23,9 +23,11 @@ Route::group([
     'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
 ], function () {
 
-    route::get('/',function(){
-        return view('front.home');
-    }) -> name('home')->middleware('verifiedUser');
+    //guest  user
+    Route::group(['namespace' => 'Site', 'middleware' => 'guest'], function () {
+        route::get('/','HomeController@home') -> name('home') -> middleware('verifiedUser');
+       // route::get('category/{slug}','CategoryController@productsBySlug') ->name('category');
+    });
 
 
     // must be authenticated user and verified by code
@@ -44,11 +46,7 @@ Route::group([
 
     });
 
-    //guest  user
-    Route::group(['namespace' => 'Site', 'middleware' => 'guest'], function () {
 
-
-    });
 
 
 });
