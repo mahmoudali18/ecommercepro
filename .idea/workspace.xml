@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8630bc38-b326-4533-a38e-0f55bfd449ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/VerificationCodeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/VerificationCodeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Services/VerificationServices.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/VerificationServices.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/admin/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/admin/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/admin/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/admin/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/includes/header-top.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/includes/header-top.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sliders/UxyhiyNR1Q7r2bhEAdjOGUkUMOAxwX11L1Ma0jyu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sliders/s1gIX8b5klz3wuXnseZ7ahfpHBaAR6QXx4URctJN.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/site.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -154,17 +150,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\ecommercepro\app\Http\Controllers\Dashboard" />
-      <recent name="C:\wamp64\www\ecommercepro\app\Http\Controllers\Site" />
-      <recent name="C:\wamp64\www\ecommercepro\app\Models" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\ecommercepro\app\Http\Requests" />
       <recent name="C:\wamp64\www\ecommercepro\app\Models" />
       <recent name="C:\wamp64\www\ecommercepro\resources\views\dashboard\sliders\images" />
       <recent name="C:\wamp64\www\ecommercepro\app\Http\Controllers\Auth" />
       <recent name="C:\wamp64\www\ecommercepro\resources\views\auth" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ecommercepro\app\Http\Controllers\Site" />
+      <recent name="C:\wamp64\www\ecommercepro\app\Http\Controllers\Dashboard" />
+      <recent name="C:\wamp64\www\ecommercepro\app\Models" />
     </key>
   </component>
   <component name="RunManager">
@@ -192,7 +188,7 @@
       <workItem from="1611924701839" duration="13059000" />
       <workItem from="1612086669451" duration="18892000" />
       <workItem from="1612178392331" duration="24999000" />
-      <workItem from="1612880532486" duration="5638000" />
+      <workItem from="1612880532486" duration="13305000" />
     </task>
     <servers />
   </component>
