@@ -18,3 +18,6 @@ function uploadImage($folder, $image)
 }
 
 
+function getPhoto( $folder, $val) {
+    return  asset("assets/images/$folder/" . $val);
+}

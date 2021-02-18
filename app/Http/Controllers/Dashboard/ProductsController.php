@@ -53,7 +53,7 @@ class ProductsController extends Controller
                 $request->request->add(['is_active' => 1]);
 
 
-            $product = Category::create([
+            $product = Product::create([
                 'slug' =>$request->slug,
                 'brand_id' =>$request->brand_id,
                 'is_active' =>$request->is_active,
@@ -61,7 +61,7 @@ class ProductsController extends Controller
 
             //save translations
             $product -> name = $request ->name;
-            $product -> description = $request ->description;
+            $product->description = $request->description;
             $product -> short_description = $request ->short_description;
             $product ->save();
 
@@ -74,6 +74,7 @@ class ProductsController extends Controller
             DB::commit();                       //admin.products.price
             return redirect()->route('admin.maincategories')->with(['success' => 'تم الاضافه بنجاح']);
         }catch (\Exception $ex){
+            // return $ex;
             DB::rollBack();
             return redirect()->route('admin.maincategories')->with(['error' => 'حدث خطا ما برجاء المحاوبه لاحقا']);
         }
