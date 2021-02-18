@@ -70,8 +70,14 @@ class Category extends Model
         return $this->belongsTo(self::class,'parent_id');
     }
 
-    public function children() {
+    public function childrens() {
         return $this->hasMany(self::class, 'parent_id');
+    }
+
+
+    public function products()
+    {
+        return $this->belongsToMany(Product::class, 'product_categories');
     }
 
 

@@ -92,7 +92,7 @@
                                                             <label for="projectinput1"> وصف المنتج
                                                             </label>
                                                             <textarea  name="description" id="description"
-                                                                   class="form-control"
+                                                                       class="form-control"
                                                                        cols="20"
                                                                        rows="10"
                                                                        class="ckeditor" placeholder=""
