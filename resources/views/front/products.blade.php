@@ -24,7 +24,6 @@
             </div>
         </div>
     </nav>
-
     <div class="container no-index">
         <div class="row">
             <div id="content-wrapper" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -94,7 +93,7 @@
                                                      data-id-product="22" data-id-product-attribute="408" itemscope=""
                                                      itemtype="http://schema.org/Product">
                                                     <div class="thumbnail-container">
-                                                        <a href=""
+                                                        <a href="audio/22-408-aenean-porta-ligula-egestas-east.html#/1-size-s/10-color-red"
                                                            class="thumbnail product-thumbnail two-image">
                                                             <img class="img-fluid image-cover"
                                                                  src="{{ getPhoto('products', $product->images[0]->photo) ?? '' }}"
@@ -144,15 +143,17 @@
 
                                                             <div class="product-group-price">
                                                                 <div class="product-price-and-shipping">
-                                                                    <span itemprop="price" class="price">{{$product -> special_price ?? $product -> price }}</span>
+                                                                    <span itemprop="price"
+                                                                          class="price">{{$product -> special_price ?? $product -> price }}</span>
                                                                     @if($product -> special_price)
-                                                                        <span class="regular-price">{{$product -> price}}</span>
+                                                                        <span
+                                                                            class="regular-price">{{$product -> price}}</span>
                                                                     @endif
 
                                                                 </div>
                                                             </div>
 
-                                                            <div class="product-desc" itemprop="desciption" >
+                                                            <div class="product-desc" itemprop="desciption">
                                                                 {!! $product -> description !!}
                                                             </div>
                                                         </div>
@@ -163,26 +164,29 @@
                                                                 action=""
                                                                 method="post" class="formAddToCart">
                                                                 @csrf
-                                                                <input type="hidden" name="id_product" value="{{$product -> id}}">
+                                                                <input type="hidden" name="id_product"
+                                                                       value="{{$product -> id}}">
                                                                 <a class="add-to-cart" href="#"
                                                                    data-button-action="add-to-cart"><i
                                                                         class="novicon-cart"></i><span>Add to cart</span></a>
                                                             </form>
 
-                                                            <a class="addToWishlist wishlistProd_22" href="#"
-                                                               data-rel="22"
-                                                               onclick="WishlistCart('wishlist_block_list', 'add', '{{$product -> id}}', false, 1); return false;">
+                                                            <a class="addToWishlist  wishlistProd_22" href="#"
+                                                               data-product-id="{{$product -> id}}"
+                                                            >
                                                                 <i class="fa fa-heart"></i>
                                                                 <span>Add to Wishlist</span>
                                                             </a>
                                                             <a href="#" class="quick-view hidden-sm-down"
-                                                               data-link-action="quickview">
+                                                               data-product-id="{{$product -> id}}">
                                                                 <i class="fa fa-search"></i><span> Quick view</span>
                                                             </a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            @include('front.includes.product-details',$product)
                                         @endforeach
                                     @endisset
                                 </div>
@@ -211,19 +215,47 @@
                                             </a>
                                         </li>
                                     </ul>
-
                                 </div>
                             </nav>
-
                         </div>
-
-
                     </section>
-
                 </section>
-
             </div>
         </div>
     </div>
+
+
+@stop
+
+@section('scripts')
+    <script>
+        $(document).on('click', '.quick-view', function () {
+            $('.quickview-modal-product-details-' + $(this).attr('data-product-id')).css("display", "block");
+        });
+        $(document).on('click', '.close', function () {
+            $('.quickview-modal-product-details-' + $(this).attr('data-product-id')).css("display", "none");
+            $('.not-loggedin-modal').css("display", "none");
+        });
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $(document).on('click', '.addToWishlist', function (e) {
+            e.preventDefault();
+            @guest()
+            $('.not-loggedin-modal').css('display','block');
+            @endguest
+            $.ajax({
+                type: 'post',
+                url: "",
+                data: {
+                    'productId': $(this).attr('data-product-id'),
+                },
+                success: function (data) {
+                }
+            });
+        });
+    </script>
 
 @stop

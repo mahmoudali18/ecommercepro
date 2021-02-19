@@ -560,6 +560,6 @@
 
 <script type="text/javascript" src="{{asset('assets/front/themes/vinova_savemart/assets/cache/bottom-3c96ed23.js')}}"></script>
 
-
+@yield('scripts')
 </body>
 </html>
