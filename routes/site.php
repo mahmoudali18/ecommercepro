@@ -24,10 +24,9 @@ Route::group([
 ], function () {
 
     //guest  user
-    Route::group(['namespace' => 'Site', 'middleware' => 'guest'], function () {
+    Route::group(['namespace' => 'Site'/*, 'middleware' => 'guest'*/], function () {
         route::get('/','HomeController@home') -> name('home') -> middleware('verifiedUser');  //[66]
         route::get('category/{slug}','CategoryController@productsBySlug') ->name('category');     //[68]
-        Route::get('product/{slug}', 'ProductController@productsBySlug')->name('product.details');
     });
 
 
