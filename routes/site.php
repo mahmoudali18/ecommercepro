@@ -46,9 +46,15 @@ Route::group([
 
     });
 
+});
 
 
+Route::group(['namespace' => 'Site', 'middleware' => 'auth'], function () {
 
+    Route::post('wishlist', 'WishlistController@store')->name('wishlist.store');
+
+    Route::delete('wishlist/{productId}', 'WishlistController@destroy')->name('wishlist.destroy');
+    Route::get('wishlist/products', 'WishlistProductController@index')->name('wishlist.products.index');
 });
 
 

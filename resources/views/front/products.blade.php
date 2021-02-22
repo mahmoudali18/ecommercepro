@@ -225,6 +225,9 @@
     </div>
 
 
+    @include('front.includes.not-logged')
+    @include('front.includes.alerts.alert1')
+    @include('front.includes.alerts.alert2')
 @stop
 
 @section('scripts')
@@ -235,6 +238,8 @@
         $(document).on('click', '.close', function () {
             $('.quickview-modal-product-details-' + $(this).attr('data-product-id')).css("display", "none");
             $('.not-loggedin-modal').css("display", "none");
+            $('.alert-modal1').css("display", "none");
+            $('.alert-modal2').css("display", "none");
         });
         $.ajaxSetup({
             headers: {
@@ -244,15 +249,21 @@
         $(document).on('click', '.addToWishlist', function (e) {
             e.preventDefault();
             @guest()
-            $('.not-loggedin-modal').css('display','block');
+            $('.not-loggedin-modal').css('display','block');    /*front.includes.not-logged*/
             @endguest
             $.ajax({
                 type: 'post',
-                url: "",
+                url: "{{Route('wishlist.store')}}",
                 data: {
                     'productId': $(this).attr('data-product-id'),
+                    '_token': "{{csrf_token()}}",
                 },
                 success: function (data) {
+                    if(data.wished) {
+                        $('.alert-modal1').css('display', 'block');
+                    }else {
+                        $('.alert-modal2').css('display', 'block');
+                    }
                 }
             });
         });
