@@ -8,6 +8,14 @@ use App\Http\Controllers\Controller;
 class WishlistController extends Controller
 {
 
+
+    public function index(){
+        $products = auth()->user()->wishlist()->latest()->get();   //latest :- at the end
+        return view('front.wishlists', compact('products'));
+    }
+
+
+
     public function store()
     {
 
@@ -19,6 +27,11 @@ class WishlistController extends Controller
         } else {
             return response()->json(['status' => true, 'wished' => false]);
         }
+    }
+
+
+    public function destroy(){
+        auth()->user()->wishlist()->detach(request('productId'));
     }
 
 

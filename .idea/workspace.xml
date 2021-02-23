@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8630bc38-b326-4533-a38e-0f55bfd449ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/products.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/WishlistController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/WishlistController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/includes/header-center.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/includes/header-center.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/site.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +141,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/Site" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/front" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -149,9 +149,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ecommercepro\resources\views\front" />
       <recent name="C:\wamp64\www\ecommercepro\app\Http\Controllers\Site" />
       <recent name="C:\wamp64\www\ecommercepro\resources\views\front\includes" />
-      <recent name="C:\wamp64\www\ecommercepro\resources\views\front" />
       <recent name="C:\wamp64\www\ecommercepro\app\Http\Requests" />
       <recent name="C:\wamp64\www\ecommercepro\app\Models" />
     </key>
@@ -186,7 +186,8 @@
       <workItem from="1611924701839" duration="13059000" />
       <workItem from="1612086669451" duration="18892000" />
       <workItem from="1612178392331" duration="24999000" />
-      <workItem from="1612880532486" duration="67976000" />
+      <workItem from="1612880532486" duration="74194000" />
+      <workItem from="1614013478800" duration="2153000" />
     </task>
     <servers />
   </component>
