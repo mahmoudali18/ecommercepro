@@ -54,7 +54,7 @@
                                             <div class="form-group">
                                                 <div class="text-center">
                                                     <img
-                                                        src=""
+                                                        src="{{$category->photo}}"
                                                         class="rounded-circle  height-150" alt="صورة القسم  ">
                                                 </div>
                                             </div>
@@ -125,7 +125,39 @@
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                <div class="col-md-3">
+                                                    <div class="form-group mt-1">
+                                                        <input type="radio"
+                                                               name="type"
+                                                               value="1"
+                                                               data-color="success"
+                                                               class="switchery"
+                                                               @if($category -> parent_id == null) checked @endif
+
+                                                        />
+                                                        <label class="card-title ml-1">
+                                                            القسم الرئيسي
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-3">
+                                                    <div class="form-group mt-1">
+                                                        <input type="radio"
+                                                               name="type"
+                                                               value="2"
+                                                               @if($category -> parent_id != null) checked @endif
+                                                               class="switchery"
+                                                               data-color="success"
+                                                        />
+                                                        <label class="card-title ml-1">
+                                                            القسم الفرعي
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
+
 
 
                                             <div class="form-actions">

@@ -467,16 +467,17 @@
                                                             <a href="{{route('product.details',$_product -> slug)}}"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="{{ getPhoto('products', $product->images[0]->photo) ?? '' }}"
+                                                                     src="{{url('assets/images/products/'.$product -> images[0] -> photo) ?? ''}}"
                                                                      alt=""
-                                                                     data-full-size-image-url="{{ getPhoto('products', $product->images[0]->photo) ?? '' }}"
+                                                                     data-full-size-image-url="{{url('assets/images/products/'.$product -> images[0] -> photo) ?? ''}}"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="{{ getPhoto('products', $product->images[1]->photo) ?? '' }}"
+                                                                     src="{{url('assets/images/products/'.$product -> images[0] -> photo) ?? ''}}"
                                                                      alt=""
-                                                                     data-full-size-image-url="{{ getPhoto('products', $product->images[1]->photo) ?? '' }}"
+                                                                     data-full-size-image-url="{{url('assets/images/products/'.$product -> images[0] -> photo) ?? ''}}"
                                                                      width="600" height="600">
                                                             </a>
+
 
                                                         </div>
                                                         <div class="product-description">

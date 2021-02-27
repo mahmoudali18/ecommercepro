@@ -29,6 +29,7 @@ class MainCategoryRequest extends FormRequest
             //'type' =>'required|in:1,2',
             'type'  => 'required|in:'. CategoryType::MainCategory . "," . CategoryType::SubCategory,    // by use enum instead of 1 , 2
             'slug' =>'required|unique:categories,slug,'.$this->id,
+            'photo' =>'required_without:id|mimes:jpg,jpeg,png',
         ];
     }
 }

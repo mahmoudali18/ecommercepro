@@ -29,7 +29,7 @@ class ProductController extends Controller
             $cat-> whereIn('categories.id',$product_categories_ids);
         }) -> limit(20) -> latest() -> get();
 
-        return view('front.products-details', $data);
+        return view('front.product-details', $data);
     }
 
 }

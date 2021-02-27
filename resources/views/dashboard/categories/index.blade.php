@@ -64,7 +64,7 @@
                                                         <td>{{$category -> _parent -> name  ?? '--'}}</td>    <!-- ?? if exist parent appear else appear ' '      //or by optional  -->
                                                         <td>{{$category -> slug}}</td>
                                                         <td>{{$category -> getActive()}}</td>
-                                                        <td> <img style="width: 150px; height: 100px;" src=""></td>
+                                                        <td> <img style="width: 150px; height: 100px;" src="{{$category -> photo}}"></td>  <!--photo this is attribute in model-->
                                                         <td>
                                                             <div class="btn-group" role="group"
                                                                  aria-label="Basic example">
@@ -87,7 +87,7 @@
                                             </tbody>
                                         </table>
                                         <div class="justify-content-center d-flex">
-
+                                           {!! $categories->links() !!}      <!--to show pagination by number-->
                                         </div>
                                     </div>
                                 </div>
