@@ -27,7 +27,7 @@ class Category extends Model
      *
      * @var array
      */
-    protected $fillable = ['parent_id', 'slug', 'is_active'];
+    protected $fillable = ['parent_id', 'slug', 'is_active','photo'];
 
     protected $hidden = ['translations'];
 
@@ -46,6 +46,10 @@ class Category extends Model
         return $this -> is_active == 0 ? 'غير مفعل' : 'مفعل';
     }
 
+
+    public function getPhotoAttribute($val){
+        return ($val !== null) ? asset('assets/images/categories/' . $val) : "";
+    }
 
 
     //scope

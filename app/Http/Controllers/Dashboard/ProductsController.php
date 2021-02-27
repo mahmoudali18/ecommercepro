@@ -225,7 +225,7 @@ class ProductsController extends Controller
     {
 
         try {
-
+          //  return $request;
             DB::beginTransaction();
 
             if (!$request->has('is_active'))
@@ -245,11 +245,11 @@ class ProductsController extends Controller
             $product->tags()->sync($request->tags);
 
             DB::commit();
-
-            return redirect()->route('admin.products.price.edit', $product_id);
+                                             //admin.products.price.edit
+            return redirect()->route('admin.products', $product_id);
 
         } catch (\Exception $ex) {
-
+            //return $ex;
             DB::rollback();
 
             return redirect()->route('admin.products')->with(['error' => 'حدث خطا ما برجاء المحاوبه لاحقا']);

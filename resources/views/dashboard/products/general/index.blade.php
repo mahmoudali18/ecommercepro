@@ -96,7 +96,7 @@
                                             </tbody>
                                         </table>
                                         <div class="justify-content-center d-flex">
-                                            {!! $products->links() !!}      <!--to show pagination by number-->
+                                           {!! $products->links() !!}      <!--to show pagination by number-->
                                         </div>
                                     </div>
                                 </div>
